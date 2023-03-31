@@ -1,39 +1,30 @@
 Feature: Deneme Feature
 
   Background:
-    Given url "https://reqres.in"
     * def pause = function(pause){ java.lang.Thread.sleep(pause) }
 
 
-  @Scenario1
-  Scenario: Scenarioa1
+  @enes
+  Scenario: Get Test
+    Given url 'https://jsonplaceholder.typicode.com/todos/1'
+    When method get
+    Then status 300
 
-    And path '/api/users/2'
-    When method GET
-    Then print response
-    Then status 200
-    Then pause(3000)
+  @post
+  Scenario: Post Test
+    Given url 'https://reqres.in/api/users'
+    And request { name: 'Dursun Kurt' , job: 'Postacı'}
+    When method post
+    Then status 201
+  @get2
+  Scenario: Get Test2
+    Given url 'https://jsonplaceholder.typicode.com/todos/2'
+    When method get
+    Then status 300
 
-  @Scenario2
-  Scenario: Scenarioa2
-    And path '/api/users/23'
-    When method GET
-    Then print response
-    And status 404
-    Then pause(3000)
-
-  @Scenario3
-  Scenario: Scenarioa3
-    And path '/api/unknown'
-    When method GET
-    Then print response
-    And status 200
-    Then pause(3000)
-
-  @Scenario4
-  Scenario: Scenarioa4
-    And path '/api/unknown/2'
-    When method GET
-    Then print response
-    And status 200
-    Then pause(3000)
+  @post2
+  Scenario: Post Test2
+    Given url 'https://reqres.in/api/users'
+    And request { name: 'Mehmet WhiteFalcon' , job: 'Developer'}
+    When method post
+    Then status 201
