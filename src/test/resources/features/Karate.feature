@@ -11,6 +11,7 @@ Feature: Deneme Feature
     When method GET
     Then print response
     Then status 200
+    Then delay(3000)
 
   @Scenario2
   Scenario: Scenarioa2
@@ -18,12 +19,15 @@ Feature: Deneme Feature
     When method GET
     Then print response
     And status 404
+    Then delay(3000)
+
   @Scenario3
   Scenario: Scenarioa3
     And path '/api/unknown'
     When method GET
     Then print response
     And status 200
+    Then delay(3000)
 
   @Scenario4
   Scenario: Scenarioa4
@@ -31,3 +35,4 @@ Feature: Deneme Feature
     When method GET
     Then print response
     And status 200
+    Then delay(3000)
