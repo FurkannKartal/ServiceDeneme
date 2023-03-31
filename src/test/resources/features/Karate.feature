@@ -1,30 +1,34 @@
 Feature: Deneme Feature
 
-  Background:
-    * def pause = function(pause){ java.lang.Thread.sleep(pause) }
-
-
   @enes
   Scenario: Get Test
-    Given url 'https://jsonplaceholder.typicode.com/todos/1'
+    Given url 'https://clouddev.testinium.io/Testinium.RestApi/api/projects/'
+    And header Authorization = 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODAyOTQyNzQsInVzZXJfbmFtZSI6Im1laG1ldGFrc2FoaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX0NPTVBBTllfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiZDA4Y2RmYjMtZjcyMS00MDhhLWI0ODQtNDIxMzI4YTUwOTRjIiwiY2xpZW50X2lkIjoidGVzdGluaXVtU3VpdGVUcnVzdGVkQ2xpZW50Iiwic2NvcGUiOlsib3BlbmlkIl19.gQDNMW_gNHYfzNK7ui5oZclIPdAZYqdFfiSpHY0Ayn-awxtmiOqSmSJ9AMwiIFwGCiaxLxVxWA1UMetN1XfI5dX7bWre_OlS2wRR7F8hIUre861y3SQvakhj0E8sNSu4L0zxQ0lsWbPNZzVRZwf9WsfA5OJ3-D2Af4evmcanvgZaqBOlZjfQVl9-6PGWS1ra_ZVr0rnOgOFGg8KIgqX_Eg8iboFkMP9g5McmTGUyl7v-GL5VRONewhnFxgAia2obeQywiP3WPVeaasbYfGj7bI4uUWpsKnV2JTc80FsH2JkGgKsBNa-D6QfqWeSqtqi19MUUPo_NtgMAspV3WX1XIA'
     When method get
-    Then status 300
+    Then status 200
+    Then print response
 
   @post
   Scenario: Post Test
-    Given url 'https://reqres.in/api/users'
-    And request { name: 'Dursun Kurt' , job: 'Postacı'}
-    When method post
-    Then status 201
+    Given url 'https://clouddev.testinium.io/Testinium.RestApi/api/projects/'
+    And header Authorization = 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODAyOTQyNzQsInVzZXJfbmFtZSI6Im1laG1ldGFrc2FoaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX0NPTVBBTllfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiZDA4Y2RmYjMtZjcyMS00MDhhLWI0ODQtNDIxMzI4YTUwOTRjIiwiY2xpZW50X2lkIjoidGVzdGluaXVtU3VpdGVUcnVzdGVkQ2xpZW50Iiwic2NvcGUiOlsib3BlbmlkIl19.gQDNMW_gNHYfzNK7ui5oZclIPdAZYqdFfiSpHY0Ayn-awxtmiOqSmSJ9AMwiIFwGCiaxLxVxWA1UMetN1XfI5dX7bWre_OlS2wRR7F8hIUre861y3SQvakhj0E8sNSu4L0zxQ0lsWbPNZzVRZwf9WsfA5OJ3-D2Af4evmcanvgZaqBOlZjfQVl9-6PGWS1ra_ZVr0rnOgOFGg8KIgqX_Eg8iboFkMP9g5McmTGUyl7v-GL5VRONewhnFxgAia2obeQywiP3WPVeaasbYfGj7bI4uUWpsKnV2JTc80FsH2JkGgKsBNa-D6QfqWeSqtqi19MUUPo_NtgMAspV3WX1XIA'
+    When method get
+    Then status 200
+    Then print response
+
+
   @get2
   Scenario: Get Test2
-    Given url 'https://jsonplaceholder.typicode.com/todos/2'
+    Given url 'https://clouddev.testinium.io/Testinium.RestApi/api/projects/'
+    And header Authorization = 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODAyOTQyNzQsInVzZXJfbmFtZSI6Im1laG1ldGFrc2FoaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX0NPTVBBTllfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiZDA4Y2RmYjMtZjcyMS00MDhhLWI0ODQtNDIxMzI4YTUwOTRjIiwiY2xpZW50X2lkIjoidGVzdGluaXVtU3VpdGVUcnVzdGVkQ2xpZW50Iiwic2NvcGUiOlsib3BlbmlkIl19.gQDNMW_gNHYfzNK7ui5oZclIPdAZYqdFfiSpHY0Ayn-awxtmiOqSmSJ9AMwiIFwGCiaxLxVxWA1UMetN1XfI5dX7bWre_OlS2wRR7F8hIUre861y3SQvakhj0E8sNSu4L0zxQ0lsWbPNZzVRZwf9WsfA5OJ3-D2Af4evmcanvgZaqBOlZjfQVl9-6PGWS1ra_ZVr0rnOgOFGg8KIgqX_Eg8iboFkMP9g5McmTGUyl7v-GL5VRONewhnFxgAia2obeQywiP3WPVeaasbYfGj7bI4uUWpsKnV2JTc80FsH2JkGgKsBNa-D6QfqWeSqtqi19MUUPo_NtgMAspV3WX1XIA'
     When method get
-    Then status 300
+    Then status 200
+    Then print response
 
   @post2
   Scenario: Post Test2
-    Given url 'https://reqres.in/api/users'
-    And request { name: 'Mehmet WhiteFalcon' , job: 'Developer'}
-    When method post
-    Then status 201
+    Given url 'https://clouddev.testinium.io/Testinium.RestApi/api/projects/'
+    And header Authorization = 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODAyOTQyNzQsInVzZXJfbmFtZSI6Im1laG1ldGFrc2FoaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX0NPTVBBTllfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiZDA4Y2RmYjMtZjcyMS00MDhhLWI0ODQtNDIxMzI4YTUwOTRjIiwiY2xpZW50X2lkIjoidGVzdGluaXVtU3VpdGVUcnVzdGVkQ2xpZW50Iiwic2NvcGUiOlsib3BlbmlkIl19.gQDNMW_gNHYfzNK7ui5oZclIPdAZYqdFfiSpHY0Ayn-awxtmiOqSmSJ9AMwiIFwGCiaxLxVxWA1UMetN1XfI5dX7bWre_OlS2wRR7F8hIUre861y3SQvakhj0E8sNSu4L0zxQ0lsWbPNZzVRZwf9WsfA5OJ3-D2Af4evmcanvgZaqBOlZjfQVl9-6PGWS1ra_ZVr0rnOgOFGg8KIgqX_Eg8iboFkMP9g5McmTGUyl7v-GL5VRONewhnFxgAia2obeQywiP3WPVeaasbYfGj7bI4uUWpsKnV2JTc80FsH2JkGgKsBNa-D6QfqWeSqtqi19MUUPo_NtgMAspV3WX1XIA'
+    When method get
+    Then status 200
+    Then print response
