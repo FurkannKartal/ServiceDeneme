@@ -32,3 +32,69 @@ Feature: Deneme Feature
     When method get
     Then status 200
     Then print response
+
+  @Tag0
+  Scenario: scenario0
+    Given url 'https://official-joke-api.appspot.com/random_joke'
+    When method get
+    Then status 200
+
+  @Tag1
+  Scenario: scenario1
+    Given url 'https://official-joke-api.appspot.com/random_jokeasd'
+    When method get
+    Then status 200
+
+  @Tag2
+  Scenario: scenario2
+    Given url 'https://official-joke-api.appspot.com/random_joke'
+    When method get
+    Then status 200
+
+  @Tag3
+  Scenario: scenario3
+    Given url 'https://official-joke-api.appspot.com/random_joke'
+    When method get
+    Then status 200
+
+  @Tag4
+  Scenario: scenario4
+    Given url 'https://official-joke-api.appspot.com/random_joke'
+    When method get
+    Then status 200
+
+  @Tag5
+  Scenario: scenario5
+    Given url 'https://official-joke-api.appspot.com/random_joke'
+    When method get
+    Then status 200
+
+  @Tag6
+  Scenario: scenario6
+    Given url 'https://official-joke-api.appspot.com/random_joke'
+    When method get
+    Then status 200
+
+  @Tag7
+  Scenario: scenario7
+    Given url 'https://official-joke-api.appspot.com/random_joke'
+    When method get
+    Then status 200
+
+  @Tag8
+  Scenario: scenario8
+    Given url 'https://official-joke-api.appspot.com/random_joke'
+    When method get
+    Then status 200
+
+  @Tag9
+  Scenario: scenario9
+    Given url 'https://official-joke-api.appspot.com/random_joke'
+    When method get
+    Then status 200
+
+  @Tag10
+  Scenario: scenario10
+    Given url 'https://official-joke-api.appspot.com/random_joke'
+    When method get
+    Then status 200
